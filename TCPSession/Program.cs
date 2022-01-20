@@ -1,4 +1,5 @@
 ﻿using System;
+using TCPSession.Interfaces;
 
 namespace TCPSession
 {
@@ -32,11 +33,7 @@ namespace TCPSession
 
     }
 
-    interface IState
-    {
-        string Name { get; }
-        void DispatchEvent(SessionState sessionState, string eventName);
-    }
+    
     class SessionState
     {
         public IState State { get; set; }
